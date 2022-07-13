@@ -1,0 +1,66 @@
+:root {
+  --white00: white;
+  --pink00: #faf2f4; /* pink-lighter: banner */
+  --pink01: #f5e3e7; /* pink-darker: alt bg */
+  --grey00: #faf9f7; /* grey-warm: alt bg */
+  --grey01: #fafafa; /* grey-white: card_bg */
+  --grey02: #f5f6f7; /* card_quickview */
+  --grey03: #e7e8ea; /* card_img_bg */
+  --grey04: #d9d9d9; /* grey-light: olBtn_border */
+  --grey05: rgb(119, 118, 120); /* olBtnBorder:hover */
+  --black01: #383533; /* btn_bg:hover */
+  --black00: black;
+}
+body[data-theme="light"] {
+  --colors-on-surfaces: var(--black00);
+  --colors-on-primary: var(--black00);
+  --colors-on-secondary: var(--white00);
+  --colors-on-olBtn: var(--black00);
+  --colors-on-btn: var(--white00);
+  --colors-bg-primary: var(--white00);
+  --colors-bg-secondary: var(--black00);
+  --colors-bg-btn: var(--black00);
+  --colors-bg-btn-hover: var(--black01);
+  --colors-bg-olBtn: var(--white00);
+  --colors-border-olBtn: var(--grey04);
+  --colors-border-olBtn-hover: var(--grey05);
+  --colors-surfaces00: var(--white00); /* primary_bg */
+  --colors-surfaces01: var(--grey01); /* card_bg */
+  --colors-surfaces02: var(--grey02); /* quickview */
+  --colors-surfaces03: var(--grey03); /* card_skele_bg */
+  --colors-surfaces-alt00: var(--pink00); /* alt_bg */
+  --colors-surfaces-alt01: var(--pink01); /* alt_bg */
+  --colors-surfaces-alt02: var(--grey00); /* alt_bg */
+}
+body[data-theme="dark"] {
+  --colors-on-surfaces: var(--white00);
+  --colors-on-primary: var(--white00);
+  --colors-on-secondary: var(--black00);
+  --colors-on-olBtn: var(--white00);
+  --colors-on-btn: var(--black00);
+  --colors-bg-primary: var(--black00);
+  --colors-bg-secondary: var(--white00);
+  --colors-bg-btn: var(--white00);
+  --colors-bg-btn-hover: var(--grey00);
+  --colors-bg-olBtn: var(--black00);
+  --colors-border-olBtn: var(--grey04);
+  --colors-border-olBtn-hover: var(--grey05);
+  --colors-surfaces00: var(--black00); /* primary_bg */
+  --colors-surfaces01: var(--grey03); /* card_bg */
+  --colors-surfaces02: var(--grey02); /* quickview */
+  --colors-surfaces03: var(--grey01); /* card_skele_bg */
+  --colors-surfaces-alt00: var(--pink01); /* alt_bg */
+  --colors-surfaces-alt01: var(--pink02); /* alt_bg */
+  --colors-surfaces-alt02: var(--grey04); /* alt_bg */
+}
+body {
+  --spacing: 10px;
+}
+body[primary] {
+  background: pink;
+}
+@media (min-width: 768px) {
+  body {
+    --spacing: 20px;
+  }
+}
