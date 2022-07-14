@@ -10,6 +10,53 @@
   --grey05: rgb(119, 118, 120); /* olBtnBorder:hover */
   --black01: #383533; /* btn_bg:hover */
   --black00: black;
+  --min-tap-target-height: 32px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 32px;
+  --spacing-gap: 5px;
+  --size-icon: 30px;
+  --font-size-xs: 12px; /* stickers */
+  --font-size-sm: 14px; /* body sm | card txt */
+  --font-size-md: 16px; /* body md */
+  --font-size-lg: 26px; /* headings sm */
+  --font-size-xl: 28px; /* headings md */
+  --font-weight-xs: 200;
+  --font-weight-sm: 300;
+  --font-weight-md: 400; /* body */
+  --font-weight-lg: 700; /* headings, titles, links */
+  --font-weight-xl: 900;
+  --radii-round: 50%;
+  --radii-pill: 9999px;
+  --radii-sm: 4px;
+  --radii-md: 6px;
+  --radii-lg: 8px;
+  --radii-xl: 12px;
+  --zIndex-send-back: 100;
+  --zIndex-bring-forward: 999;
+  --zIndex-middle: 300;
+}
+html {
+  --colors-on-surfaces: var(--black00);
+  --colors-on-primary: var(--black00);
+  --colors-on-secondary: var(--white00);
+  --colors-on-olBtn: var(--black00);
+  --colors-on-btn: var(--white00);
+  --colors-bg-primary: var(--white00);
+  --colors-bg-secondary: var(--black00);
+  --colors-bg-btn: var(--black00);
+  --colors-bg-btn-hover: var(--black01);
+  --colors-bg-olBtn: var(--white00);
+  --colors-border-olBtn: var(--grey04);
+  --colors-border-olBtn-hover: var(--grey05);
+  --colors-bg-surfaces00: var(--grey01); /* card_bg */
+  --colors-bg-surfaces01: var(--grey02); /* quickview */
+  --colors-bg-surfaces02: var(--grey03); /* card_skele_bg */
+  --colors-bg-surfaces-alt00: var(--pink00); /* alt_bg */
+  --colors-bg-surfaces-alt01: var(--pink01); /* alt_bg */
+  --colors-bg-surfaces-alt02: var(--grey00); /* alt_bg */
+  --colors-bg-txtBtn: transparent;
+  --colors-bg-txtBtn-hover: var(--grey00);
 }
 body[data-theme="light"] {
   --colors-on-surfaces: var(--black00);
@@ -24,13 +71,12 @@ body[data-theme="light"] {
   --colors-bg-olBtn: var(--white00);
   --colors-border-olBtn: var(--grey04);
   --colors-border-olBtn-hover: var(--grey05);
-  --colors-surfaces00: var(--white00); /* primary_bg */
-  --colors-surfaces01: var(--grey01); /* card_bg */
-  --colors-surfaces02: var(--grey02); /* quickview */
-  --colors-surfaces03: var(--grey03); /* card_skele_bg */
-  --colors-surfaces-alt00: var(--pink00); /* alt_bg */
-  --colors-surfaces-alt01: var(--pink01); /* alt_bg */
-  --colors-surfaces-alt02: var(--grey00); /* alt_bg */
+  --colors-bg-surfaces00: var(--grey01); /* card_bg */
+  --colors-bg-surfaces01: var(--grey02); /* quickview */
+  --colors-bg-surfaces02: var(--grey03); /* card_skele_bg */
+  --colors-bg-surfaces-alt00: var(--pink00); /* alt_bg */
+  --colors-bg-surfaces-alt01: var(--pink01); /* alt_bg */
+  --colors-bg-surfaces-alt02: var(--grey00); /* alt_bg */
 }
 body[data-theme="dark"] {
   --colors-on-surfaces: var(--white00);
@@ -53,14 +99,18 @@ body[data-theme="dark"] {
   --colors-surfaces-alt01: var(--pink02); /* alt_bg */
   --colors-surfaces-alt02: var(--grey04); /* alt_bg */
 }
-body {
-  --spacing: 10px;
+
+@media (min-width: 1024px) {
+  :root {
+    --spacing-sm: 16px;
+    --spacing-md: 32px;
+    --spacing-lg: 42px;
+    --spacing-gap: 10px;
+  }
 }
-body[primary] {
-  background: pink;
-}
-@media (min-width: 768px) {
-  body {
-    --spacing: 20px;
+
+@media (pointer: coarse) {
+  :root {
+    --min-tap-target-height: 48px;
   }
 }

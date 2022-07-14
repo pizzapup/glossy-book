@@ -1,9 +1,0 @@
-{
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      // Emotion typedefs now point to an empty file, which unsets all declarations
-      "@emotion/core": ["./types/emotion.d.ts"]
-    }
-  }
-}

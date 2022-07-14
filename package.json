@@ -3,15 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/core": "^11.0.0",
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
-    "@stitches/react": "^1.2.8",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "storybook-addon-react-dev-tools": "^1.1.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -52,6 +53,7 @@
   },
   "devDependencies": {
     "@storybook/addon-actions": "^6.5.9",
+    "@storybook/addon-console": "^1.2.3",
     "@storybook/addon-essentials": "^6.5.9",
     "@storybook/addon-interactions": "^6.5.9",
     "@storybook/addon-links": "^6.5.9",

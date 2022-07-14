@@ -1,0 +1,14 @@
+.heading-text {
+  font-weight: var(--font-size-xl);
+  font-weight: var(--font-weight-lg);
+}
+.body-text {
+  font-weight: var(--font-weight-md);
+  font-size: var(--font-size-sm);
+}
+.heading-text .secondary {
+  font-weight: var(--font-size-lg);
+}
+.heading-text .card-text {
+  font-weight: var(--);
+}
