@@ -1,72 +1,22 @@
 import { Button } from "./Button";
-/** @jsxImportSource @emotion/react */
-import { css } from "@emotion/react";
+import "./Button.css";
 
 export const IconButton = (props) => {
-  const layout = props.layout;
-  const direction = props.layout === "end" ? "row-reverse" : "row";
-  const ICON = props.icon ? (
-    <div className="inner-icon">
-      <img src={props.icon} alt="" />
-    </div>
-  ) : (
-    ""
-  );
-  const TEXT = props.label ? (
-    <div className="inner-text">{props.label}</div>
-  ) : (
-    ""
-  );
+  const direction =
+    props.layout === "end" ? "layout-row-reverse" : "layout-row";
+  const otherr = props.label
+    ? "icon-button-text"
+    : "icon-button-text icon-only";
+  console.log(otherr);
   return (
-    <Button
-      btnType="icon"
-      css={css`
-        ${layout === "icon only"
-          ? {
-              padding: "0px",
-              aspectRatio: "1/1",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }
-          : ""};
-      `}
-    >
-      <div
-        css={css`
-          display: flex;
-          flex-direction: ${direction};
-          justify-content: center;
-          align-items: center;
-          gap: 5px;
-          white-space: nowrap;
-          ${layout === "icon only"
-            ? {
-                padding: "0px",
-                aspectRatio: "1/1",
-              }
-            : ""};
-          height: min-content;
-          .inner-icon {
-            flex-basis: 0.5px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-          .inner-icon img {
-            max-height: 2em;
-            fill: white;
-            line-height: 0;
-            margin: 0;
-            padding: 0;
-          }
-          .inner-text {
-            flex-basis: 2px;
-          }
-        `}
-      >
-        {ICON}
-        {TEXT}
+    <Button className={"icon-button"}>
+      <div className={"icon-button-content-wrap " + direction}>
+        <div className="icon-button-icon-wrap">
+          <img className="icon-button-icon" src={props.icon} alt="" />
+        </div>
+        <div className={otherr}>
+          <span>{props.label}</span>
+        </div>
       </div>
     </Button>
   );

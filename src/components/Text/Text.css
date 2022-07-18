@@ -1,0 +1,38 @@
+h2,
+h3 {
+  padding: 0;
+  margin: 0;
+}
+.heading-text {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-lg);
+}
+.body-text {
+  font-weight: var(--font-weight-md);
+  font-size: var(--font-size-md);
+}
+
+.secondary .heading-text {
+  font-size: var(--font-size-lg);
+}
+.secondary .body-text {
+  font-size: var(--font-size-md);
+}
+.card .heading-text {
+  font-size: var(--font-size-sm);
+}
+.card .body-text {
+  font-size: var(--font-size-sm);
+}
+.text-block {
+  display: flex;
+  flex-direction: column;
+  border: purple solid thin;
+  padding: 0px 4px 4px 4px;
+}
+.text-block-center {
+  text-align: center;
+}
+.text-block-left {
+  text-align: left;
+}

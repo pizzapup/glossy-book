@@ -1,0 +1,69 @@
+.button {
+  padding: 14px 24px;
+  transition: all 0.15s linear 0s;
+  background-color: var(--colors-bg-btn);
+  color: var(--colors-on-btn);
+  fill: var(--colors-on-btn);
+  font-weight: var(--font-weight-md);
+  font-size: inherit;
+  border-radius: var(--radii-sm);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+}
+.primary-button:hover {
+  background-color: var(--colors-bg-btn-hover);
+}
+.outline-button {
+  background: var(--colors-bg-olBtn);
+  color: var(--colors-on-olBtn);
+  fill: var(--colors-on-olBtn);
+  border: solid thin var(--colors-border-olBtn);
+}
+.outline-button:hover {
+  background-color: var(--colors-bg-olBtn);
+  border: solid thin var(--colors-border-olBtn-hover);
+}
+/* .quickview-button {
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  background-color: var(--whiteSmoke);
+  top: -30px;
+  width: 100%;
+} */
+.text-button {
+  background: transparent;
+  color: inherit;
+  fill: inherit;
+  font-weight: var(--font-weight-md);
+}
+.text-button:hover {
+  text-decoration: underline;
+}
+
+.layout-row-reverse {
+  flex-direction: row-reverse;
+}
+.icon-only {
+  display: none;
+}
+.layout-row {
+  flex-direction: row;
+}
+.icon-button-content-wrap {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 5px;
+}
+.icon-button-icon {
+  height: 35px;
+  display: block;
+}
+.icon-button-text {
+  white-space: nowrap;
+}

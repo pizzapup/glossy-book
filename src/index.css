@@ -2,14 +2,25 @@ body {
   margin: 0;
   font-size: 14px;
   font-weight: 400;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+/* adding checkmark to pressed buttons to indicate state in high-contrast browsers where other styling methods may be effected */
+@media (-ms-high-contrast: active) {
+  [aria-pressed="true"]::after {
+    content: "\0020✓";
+  }
+}
+[aria-pressed]:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.25rem skyblue;
+}
+[aria-pressed="true"]:focus {
+  outline: 2px solid transparent; /* appears in WHCM */
+  box-shadow: 0 0 0 0.25rem skyblue, inset 0 0 0 0.15rem #000,
+    inset 0.25em 0.25em 0 #fff;
 }

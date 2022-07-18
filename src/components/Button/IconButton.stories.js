@@ -52,37 +52,5 @@ End.args = {
 };
 export const IconOnly = Template.bind({});
 IconOnly.args = {
-  layout: "icon only",
+  layout: "iconOnly",
 };
-// const IconButtonTemplate = (args) => (
-//   <IconBtn icon={args.icon} label={args.label} {...args} />
-// );
-// export const IconButton = IconButtonTemplate.bind({});
-// IconButton.args = {
-//   label: "Icon Button",
-//   variant: "icon",
-//   color: "pink",
-//   backgroundColor: "pink",
-//   // color: null,
-//   icon: AcctIcon,
-// };
-// export const IconButtonEnd = IconButtonTemplate.bind({});
-// IconButtonEnd.args = {
-//   label: "Icon end",
-//   variant: "icon",
-//   icon: AcctIcon,
-// };
-// IconButton.args = {
-//   label: "Icon Button",
-//   variant: "icon",
-//   color: "pink",
-//   backgroundColor: "pink",
-//   // color: null,
-//   icon: AcctIcon,
-// };
-// export const IconButtonICON = (args) => <IconBtn icon={args.icon} iconEnd />;
-// IconButtonICON.args = {
-//   // label: "Icon end",
-//   variant: "icon",
-//   icon: AcctIcon,
-// };

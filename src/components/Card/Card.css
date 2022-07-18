@@ -1,0 +1,131 @@
+.card-wrap {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 376px;
+  min-width: 200px;
+  /* aspect-ratio: 74%; */
+  background-color: var(--colors-bg-surfaces00);
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+}
+
+.card-top {
+  min-width: 100%;
+  height: auto;
+  position: relative;
+}
+.sticker {
+  position: absolute;
+  background-color: white;
+  right: 8px;
+  top: 8px;
+  height: 19px;
+  line-height: 18px;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 700;
+  opacity: 0.9;
+}
+.card-top img {
+  max-height: min-content;
+  width: 100%;
+  display: block;
+  height: auto;
+}
+.card-wrap .button {
+  width: 100%;
+  min-width: 58px;
+  min-height: 40px;
+  max-height: 48px;
+}
+.card-bottom {
+  position: relative;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+}
+/* min-width 768 -- 135*/
+/* min width 1024 -- 143*/
+.text-block-card {
+  display: flex;
+  flex-direction: column;
+
+  padding: 5px;
+}
+.text-block-card > * {
+  line-height: 20px;
+  margin: 0;
+  padding: 0;
+}
+.text-block-card:hover {
+  color: blue;
+}
+.card-quickview-wrap {
+  position: relative;
+  width: 100%;
+}
+.card-quickview {
+  opacity: 0;
+  position: absolute;
+  min-height: 30px;
+  width: 100%;
+  bottom: 0px;
+  height: 0;
+  border: none;
+}
+.card-wrap:hover .card-quickview {
+  opacity: 0.95;
+  background: var(--colors-bg-surfaces01);
+  min-height: 30px;
+}
+.card-quickview:hover {
+  color: blue;
+}
+.card-wrap .button {
+  margin: 5px auto;
+}
+.card-wrap .button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-button-text {
+  font-weight: 600;
+}
+.card-button-text-price {
+  display: flex;
+  gap: 5px;
+  font-weight: 600;
+}
+.card-button-text-discount {
+  display: block;
+  color: #555555;
+  text-decoration: line-through;
+  font-weight: 400;
+}
+.options-wrap {
+  display: flex;
+  gap: 5px;
+  min-height: 26px;
+}
+.option {
+  background-color: var(--colors-bg-surfaces-alt01);
+  min-height: 24px;
+  min-width: 24px;
+  border-radius: 50%;
+  border: solid thin transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.option:hover {
+  border: solid thin blue;
+}
+
+.svg-opt {
+  transform: rotate(180deg);
+}
