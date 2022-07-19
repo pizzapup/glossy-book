@@ -1,31 +1,33 @@
 .image-duo {
-  /* display: flex; */
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--spacing-gap);
-  overflow: hidden;
+  /* background-color: pink; */
+  height: 50vh;
+  width: 100vw;
+  max-width: 100%;
+  flex: 0 1 auto;
+  flex-wrap: wrap;
 }
-/* .image-duo-image {
-  overflow: hidden;
-  background-size: cover;
+.image-duo-inner {
+  width: 100%;
+  display: flex;
+  gap: 8px;
 }
-.image-duo-image img {
-  background-size: cover;
-  overflow: hidden;
-  height: auto;
-  width: 100%;
-  filter: saturate(70%);
-  max-height: 100vh;
-} */
-.image-duo-test {
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-  background-size: cover;
-  /* margin-bottom: -5px; */
-  background-color: lightblue;
+.image-duo-image-wrap {
+  width: 50%;
+  object-fit: cover;
   background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: var(--background-image);
 }
+.image-duo-image {
+  object-fit: cover;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* @media only screen and (min-width: 900px) {
+} */
+@media only screen and (min-width: 768px) {
+}
+@media only screen and (min-width: 480px) {
+}
+/* sizes="(min-width: 1024px) 960px,(min-width: 768px) 480px,(min-width: 480px) 240px, 240px" */

@@ -13,8 +13,11 @@ export default {
     label: {
       description: "Image Duo",
     },
-    images: ["https://place-puppy.com/400x700", "https://placedog.net/400/700"],
+    images: ["https://place-puppy.com/600x800", "https://placedog.net/600/800"],
   },
 };
 const Template = (args) => <ImageDuo {...args} />;
 export const Primary = Template.bind({});
+Primary.args = {
+  images: ["https://place-puppy.com/600x800", "https://placedog.net/600/800"],
+};

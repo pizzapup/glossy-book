@@ -1,55 +1,44 @@
 .section-layout {
-  display: flex;
 }
-.section-layout-vertical {
-  flex-direction: column;
-  justify-items: center;
-  border: plum solid thick;
-}
-.section-layout-vertical-reverse {
-  background: lightblue;
-  flex-direction: column-reverse;
+.section-layout button {
+  appearance: none;
+  display: inline-flex;
+  position: relative;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  box-shadow: none;
+  min-height: 40px;
+  border-radius: 3px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 14px 24px;
+  text-transform: none;
+  margin: 0px;
+  height: auto;
+  text-align: center;
 }
 /*  */
-.section-layout-horizontal {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  border: green solid thick;
-}
-.section-layout-horizontal-reverse {
-  display: grid;
-  grid-template-columns: 0.5fr 1fr;
-  border: yellow solid thick;
-  /* display: grid; */
-  /* grid-template-columns: 1.5fr 0.75fr; */
-  /* grid-template-areas: "mediaComp textComp"; */
-}
-/* MOBILE */
-/* .section-layout-reverse {
-  flex-direction: row-reverse;
-} */
-/* tablet | desktop (460) */
-/* @media only screen and (min-width: 600px) {
-  .section-layout {
-    grid-template-columns: 0.75fr 1.5fr;
-    justify-items: center;
-    border: green solid thin;
-  }
-  .section-layout-reverse {
-    flex-direction: column-reverse;
-    grid-template-columns: 1fr 0.75fr;
-  }
-} */
 
-/* desktop */
-/* @media only screen and (min-width: 900px) {
-  .section-layout-bp2 {
-    grid-template-columns: 0.75fr 1.5fr;
-    justify-items: center;
-    border: green solid thin;
-  }
-  .section-layout-bp2-reverse {
-    flex-direction: column-reverse;
-    grid-template-columns: 1fr 0.75fr;
-  }
-} */
+.heading-text {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-lg);
+}
+.body-text {
+  font-weight: var(--font-weight-md);
+  font-size: var(--font-size-md);
+}
+.secondary-section .heading-text {
+  font-size: var(--font-size-lg);
+}
+.secondary-section .body-text {
+  font-size: var(--font-size-md);
+}
+.card .heading-text {
+  font-size: var(--font-size-sm);
+}
+.card .body-text {
+  font-size: var(--font-size-sm);
+}

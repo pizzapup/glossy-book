@@ -5,7 +5,6 @@ export default {
   component: SectionLayout,
   argTypes: {
     deviceView: { control: "select", options: ["vertical", "horizontal"] },
-
     variantType: "section",
     alignment: "center",
     headingText: "Section TextBlock",

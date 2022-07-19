@@ -9,10 +9,10 @@ const variants = {
 };
 export const Button = (props) => {
   const variant = props.variant ? variants[props.variant] : "primary-button";
+  console.log("button " + variant);
   return (
     <button {...props} className={"button " + variant}>
       {props.children}
     </button>
   );
 };
-const Btn = ({ children }) => <>{children}</>;
