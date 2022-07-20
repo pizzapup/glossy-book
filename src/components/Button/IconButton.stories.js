@@ -8,7 +8,7 @@ import Smiley from "./icons/GroovyIcons01.png";
 import RainyRainbow from "./icons/GroovyIcons14.png";
 import RollerSkate from "./icons/GroovyIcons16.png";
 export default {
-  title: "IconButton",
+  title: "Buttons/Icon Button",
   component: IconButton,
   argTypes: {
     label: {

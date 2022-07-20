@@ -2,19 +2,17 @@ import React from "react";
 import { Button } from "./Button";
 import { FunButtons } from "./FunButtons/FunButtons";
 export default {
-  title: "Buttons",
+  title: "Buttons/Button",
   component: Button,
   argTypes: {
     label: {
       label: { control: "text" },
       description: "Text/Content the component holds (children)",
-      defaultValue: { summary: "Button" },
     },
     variant: {
       control: "select",
       options: ["default", "outline", "text"],
       description: "Styles for button components; default | outline | text ",
-      defaultValue: { summary: "n/a" },
     },
   },
   args: {

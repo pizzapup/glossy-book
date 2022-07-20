@@ -1,8 +1,8 @@
 import React from "react";
-import { FunButtons } from "./FunButtons";
+import { FunButtons, Gallery, list } from "./FunButtons";
 
 export default {
-  title: "Buttons",
+  title: "Buttons/Fun Buttons",
   component: FunButtons,
   argTypes: {
     label: {
@@ -18,6 +18,7 @@ export default {
         "mimas",
         "atlas",
         "kari",
+        "atlas",
         "pandora",
         "janus",
         "anthe",
@@ -28,17 +29,12 @@ export default {
         "greip",
         "dione",
         "helene",
-        "atlas",
         "kari",
-        // "rhea",
-        // "narvi",
-        // "hati",
       ],
     },
   },
   args: {
     label: "button",
-    variant: "Bestia",
   },
 };
 const Template = (args) => <FunButtons {...args}>{args.label}</FunButtons>;
