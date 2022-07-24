@@ -1,0 +1,51 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta title="Design System/Links/Accessibility Info" />
+
+# Links
+
+## Accessibility Info
+
+The technique [G201](https://www.w3.org/TR/WCAG20-TECHS/G201.html) of the WCAG asks that each link opens in a new tab has:
+
+- a warning spoken in assistive technology that this link opens to a new tab,
+- a visual warning in text that this link opens to a new window.
+
+## Native Markup Limitations for Links:
+
+- an `<a>` element _is_ interactive and cannot contain any interactive descendants
+
+  | Name | Type | Description |
+  | ---- | ---- | ----------- |
+  | Name | Type | Description |
+
+### Nested ['Layered'](https://www.sarasoueidan.com/blog/nested-links/) Links:
+
+Getting the title of the post to expand and cover the entire post area would mean that that area would also link to the post, which is exactly what we want to do in the first place!
+
+        .the-post {
+            /* elevate the links up */
+            a {
+                position: relative;
+                z-index: 1;
+            }
+        }
+
+                .the-post-title {
+                    /* ... */
+
+                    a {
+                        position: static;
+                        /* expand the pseudo-element to cover the post area */
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            z-index: 0;
+                            top: ...;
+                            left: ...;
+                            width: ...;
+                            height: ...;
+                            /* ... */
+                        }
+                    }
+                }

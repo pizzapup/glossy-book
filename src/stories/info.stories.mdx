@@ -1,0 +1,58 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta title="Design System/Accessibility Info" />
+
+- [Building
+  Blocks](https://get.foundation/building-) - Custom Control Accessible
+  Development Checklist: [using-aria](https://w3c.github.io/using-aria/#checklist)
+- A11Y Style Guide [A11Y Style Guide](https://a11y-style-guide.com/style-guide/)
+
+# Accessibility Information & Resources
+
+> https://ashleemboyer.com/blog/how-i-added-a-skip-navigation-link-to-my-next-js-site
+
+> "If your site’s structure makes sense in plain HTML, you can make it beautiful with CSS. But if the HTML lacks structure, additional styling will only hide underlying accessibility issues." ~@ajdubovoy
+
+##
+
+- [Accessible Front-end Components Claims vs Reality](https://hidde.blog/accessible-front-end-components-claims-vs-reality/) Hidde de Vries
+- [https://brucelawson.co.uk/2021/component-libraries-accessibility-and-transparency/](https://brucelawson.co.uk/2021/component-libraries-accessibility-and-transparency/) Bruce Lawson
+
+- [https://adrianroselli.com/2016/03/be-wary-of-accessibility-guarantees-from-vendors.html](https://adrianroselli.com/2016/03/be-wary-of-accessibility-guarantees-from-vendors.html)
+
+- [Baking accessibility into components: how frameworks help](https://hidde.blog/baking-accessibility-into-components-how-frameworks-help/) Hidde de Vries
+
+> "Using Lion does not ensure an accessible outcome. Sorry, it doesn't work like that. What it does provide is a solid base for you to build your own design systems and/or components with. It covers things like keyboard accessibility, UX design and semantics but a bad visual design can still ruin a lot. You have the freedom to use Lion for a white-on-yellow set of components (but it probably won't be very usable for many). It's your responsibility to use what's provided, and build something that includes people" [Erik Kroes (Lion)](https://brucelawson.co.uk/2021/component-libraries-accessibility-and-transparency/)
+
+>
+
+## Web Content Accessibility Guidelines (WCAG) 2
+
+WCAG 2.2 is scheduled to be completed and published by September 2022 - [Check out the working draft!](https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22)
+
+### Four Principles of Accessibility [Introduction](https://www.w3.org/WAI/WCAG22/Understanding/intro) | [Quick Reference](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0)
+
+| [Perceivable](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#principle1)                                                                                                                                                                                                                                                                                                                      | [Operable](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#principle2)                                                                                                                                                                                                                                                                                                                                                                                                                                            | [Understandable](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#principle3)                                                                                                                                                                                          | [Robust](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#principle4)         |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| [1.1](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#text-alternatives) Text Alternatives <br/> [1.2](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#time-based-media) Captions and Alternatives <br/> [1.3](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#adaptable) Adaptable<br/> [1.4](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#distinguishable) Distinguishable | [2.1](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#keyboard-accessible) Keyboard Accessible <br/> [2.2](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#enough-time) Enough Time<br/> [2.3](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#seizures-and-physical-reactions) Seizures & Physical Reactions<br /> [2.4](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#navigable) Navigable <br/> [2.5](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#input-modalities) Input Modalities | [3.1](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#readable) Readable <br/> [3.2](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#predictable) Predictable<br/> [3.3](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#input-assistance) Input Assistance | [4.1](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#compatible) Compatible |
+
+### W3's 5 Rules for [Using Aria](https://www.w3.org/TR/using-aria/#NOTES)
+
+1.  Use the built-in semantics of native HTML elements or attributes [[2.1]](https://www.w3.org/TR/using-aria/#firstrule)
+2.  Try not to change native semantics [[2.2]](https://www.w3.org/TR/using-aria/#secondrule)
+3.  All interactive ARIA controls must be usable with the keyboard [[2.3]](https://www.w3.org/TR/using-aria/#3rdrule)
+4.  Do not use <code>role="presentation"</code> or <code>aria-hidden="true"</code> on a focusable element [[2.4]](https://www.w3.org/TR/using-aria/#4thrule)
+5.  All interactive elements must have an accessible name [[2.5]](https://www.w3.org/TR/using-aria/#fifthrule)
+
+### Some Examples of Redundant ARIA [2.13.1](https://w3c.github.io/using-aria/#some-examples-of-redundant-aria)
+
+Adding default implicit roles to interactive elements listed in the HTML5 Recommendation is a waste of time:
+`<button role="button">press me</button>`
+
+Adding ARIA state or property attributes in addition to their native HTML counterparts
+is a waste of time:
+`<input type="text" required aria-required="true">`
+`<div hidden aria-hidden="true">`
+
+Adding ARIA roles and states or properties to long-implemented structural elements is a waste of time:
+`<h1 role="heading" aria-level="1">heading text</h1>`

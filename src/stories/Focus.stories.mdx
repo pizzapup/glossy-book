@@ -1,0 +1,50 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta title="Design System/Focus" />
+
+# Focus Guidelines
+
+## Why?
+
+<div className="sub-heading">subheading</div>
+
+- not all people who rely on focus styles use a keyboard and making focus styles keyboard-only takes away an affordance for mouse users too
+
+**If it's interactive, it needs a focus style**
+
+> "**A keyboard user’s cursor equivalent is the focus indicator** By designing and implementing accessible focus indicators, we can make our products accessible to keyboard users, as well as users of assistive technology that works through a keyboard or emulates keyboard functionality, such as voice control, switch controls, mouth sticks, and head wands" - [Sara Soueidan](https://www.sarasoueidan.com/blog/focus-indicators/#:~:text=A%20keyboard%20user%E2%80%99s%20cursor%20equivalent%20is%20the%20focus%20indicator)
+
+**state changes:** resting, focused, activated
+
+> "A focus indicator can also take other forms, but outlines are very common for several reasons. Outlines have an advantage over other visual indicators (such as borders or background colors, for example) in that they can be applied to the element without causing any significant changes to that element. And since an outline is not part of an element’s box model, it does not affect the layout of that element, and will therefore not cause any layout shifts when it is applied. (That’s also why outlines are preferred over borders for visualizing and debugging layouts 💡) In addition to that, **outlines are preserved and used in Forced Color Modes such as Windows High Contrast Mode, where background colors, border colors, and box shadows are usually overridden by user and system styles**" - [Sara Soueidan](https://www.sarasoueidan.com/blog/focus-indicators/#:~:text=A%20focus%20indicator%20can,user%20and%20system%20styles.)
+
+## Info
+
+- `:focus` (pseudo class) | used for styling an element that is currently targeted by the keyboard, or activated by the mouse
+- `<a>`s, `<button>`s, `<input>`s, and textareas all have the :focus state by default, but you can give a focus state to any element in HTML
+
+<div className="sub-heading">subheading</div>
+
+- not all people who rely on focus styles use a keyboard and making focus styles keyboard-only takes away an affordance for mouse users too
+
+### Resources
+
+- Lari Maza | [Having a Little Fun With Custom Focus Styles](https://css-tricks.com/having-a-little-fun-with-custom-focus-styles/)
+- Vialy Friedman | [A Complete Guide To Accessible Front-End Components/Accessible `:focus` Styles](https://www.smashingmagazine.com/2021/03/complete-guide-accessible-front-end-components/#accessible-focus-styles)
+- Sara Soueidan | [A guide to designing accessible, WCAG-compliant focus indicators](https://www.sarasoueidan.com/blog/focus-indicators/)
+- Nic Chan | [Tips for Focus Styles](https://www.nicchan.me/blog/tips-for-focus-styles/)
+- Eric Bailey | [Focusing on Focus Styles](https://css-tricks.com/focusing-on-focus-styles/)
+- Šime Vidas n | [Focus Rings, Donut Scope, More em Units, and Global Privacy Control](https://css-tricks.com/weekly-platform-news-focus-rings-donut-scope-ditching-em-units-and-global-privacy-control/#chrome-will-stop-displaying-focus-rings-when-clicking-buttons)
+
+#### open
+
+- Icon Buttons | Sara Soueidan: [Accessible Icon Buttons](https://www.sarasoueidan.com/blog/accessible-icon-buttons/)
+
+- Icon Links | Kitty Giraudel [Accessible Icon Links](https://kittygiraudel.com/2020/12/10/accessible-icon-links/)
+
+- [tips for focus styles](https://www.nicchan.me/blog/tips-for-focus-styles/)
+
+| Name   | Type   | Description          |
+| ------ | ------ | -------------------- |
+| `name` | string | Name of the resource |
+| `path` | string | Path to the resource |

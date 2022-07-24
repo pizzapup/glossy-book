@@ -2,7 +2,7 @@ import React from "react";
 import { FunButtons, Gallery, list } from "./FunButtons";
 
 export default {
-  title: "Buttons/Fun Buttons",
+  title: "Design System/Buttons/Fun Buttons",
   component: FunButtons,
   argTypes: {
     label: {

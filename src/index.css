@@ -32,3 +32,11 @@ button:focus-visible {
   /* Fallback. Visible with custom system colors in Forced Color Modes */
   outline: 1px solid transparent;
 }
+/* font-family: MiddleDot, Baskerville, "Lucida Bright", Perpetua, Times,
+    "Times New Roman", Palatino, Bookman, "New Century Schoolbook", serif;
+  font-size: 22.4px;
+  height: 1.5em;
+  line-height: 1.5em; */
+:root {
+  --color-icon-link: #f5e3e7;
+}

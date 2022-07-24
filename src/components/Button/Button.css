@@ -74,3 +74,32 @@
 @media only screen and (min-width: 480px) {
 }
 /* sizes="(min-width: 1024px) 960px,(min-width: 768px) 480px,(min-width: 480px) 240px, 240px" */
+/* Fixing the Safari bug for `<button>`s overflow */
+/* .Button-Content {
+  position: relative;
+} */
+
+/* All the states on the inner element */
+/* :hover > .Button-Content {
+  background: blue;
+}
+
+:active > .Button-Content {
+  background: darkorange;
+}
+
+:focus > .Button-Content {
+  box-shadow: 0 0 3px 7px lime;
+} */
+
+/* Removing the focus ring styles specifically for button in Firefox */
+/* button:not(:-moz-focusring):focus > .ComplexButton-Content {
+  box-shadow: none;
+} */
+
+/* Removing default outline only after we've added our custom one */
+/* .Button:focus,
+.Button-Content:focus {
+  outline: none;
+} */
+/* https://kizu.dev/keyboard-only-focus/#solution */

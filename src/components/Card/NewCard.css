@@ -1,0 +1,133 @@
+.card,
+.card .card-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.card .card-text {
+  flex-grow: 1;
+  order: 1; /* orders the card img to top of the layout*/
+}
+.card .card-text > * + * {
+  margin-top: 0.75rem;
+  max-width: 60ch;
+}
+.card .card-text :last-child {
+  margin-top: auto;
+}
+.card .card-text :nth-last-child(2) {
+  margin-bottom: 0.75rem;
+}
+.card .card-media {
+  height: 5rem;
+}
+
+.card .card-media img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.card + .card {
+  margin-top: 1.5rem;
+}
+
+@supports (display: grid) {
+  .cards > ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    grid-gap: 1.5rem;
+  }
+
+  .card + .card {
+    margin-top: 0;
+  }
+}
+
+/* There's an inherent compromise in using object-fit:cover: To maintain the correct aspect ratio, the image will become cropped along two or more edges. Since the image is always centered within its container, it helps to curate images for which the center is the focus. This positioning can be adjusted using object-position. */
+
+/* small links at bottom */
+.card .card-small .card-link {
+  position: relative;
+  padding: 0.5rem 0.5rem 0.5rem 0;
+}
+/* increase the gap between single-column cards on small screens */
+@media (max-width: 400px) {
+  .card-group > ul {
+    grid-gap: 4.5rem;
+  }
+}
+
+.card .card-heading a:focus {
+  text-decoration: underline;
+}
+
+.card .card-heading:focus-within ~ .card-cta {
+  box-shadow: 0 0 0 0.125rem;
+}
+
+.card:focus-within .card-heading .card-link:focus {
+  text-decoration: none;
+}
+/**
+ * 1. Show that the card is interactive.
+ */
+.card-cta-primary {
+  cursor: pointer; /* 1 */
+  border: 2px solid transparent; /* 1 */
+  transition: border-color 200ms;
+}
+
+/**
+ * 1. Display interactivity on hover/focus by highlighting the border.
+ */
+.card-cta-primary:hover::before,
+.card-cta-primary:focus::before {
+  border-color: hotpink; /* 1 */
+}
+
+/**
+ * 1. Hide the default focus outline as it’s recreated with a border.
+ */
+.card-cta-primary:focus {
+  outline: none; /* 1 */
+}
+/* CSS for block link */
+.card-block a[href]::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+/* re-ordering card content to achieve visual design but maintain content order in the DOM  */
+/* .reorder {
+  display: flex;
+  flex-direction: column;
+}
+
+.reorder h3 {
+  order: 2;
+}
+
+.reorder p {
+  order: 3;
+} */
+.card-reorder {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-reorder img {
+  order: -1;
+}
+/* account for additional controls by leaving space. leaving dead space between interactive controls helps prevent mis-clicks/taps */
+.card-block.extracta a[href]::after {
+  bottom: 3.75em;
+}
+
+.card-block.extracta p a[href]::after {
+  content: none;
+}
