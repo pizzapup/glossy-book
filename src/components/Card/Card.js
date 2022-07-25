@@ -1,6 +1,7 @@
 import "./Card.css";
 
 export const Card = (props) => {
+  console.log("test");
   const Image = (data) => (
     <img
       src={data.src}
@@ -30,18 +31,18 @@ export const Card = (props) => {
     </>
   );
 };
-export const CardGroup = ({ children }) => {
-  return (
-    <div className="card-group">
-      <ul className="card-group-list">{children}</ul>
-    </div>
-  );
-};
 
 export const CardGroupItem = (props) => {
   return (
     <li className="card-group-item">
       <Card {...props} />
     </li>
+  );
+};
+export const CardGroup = ({ children }) => {
+  return (
+    <div className="card-group">
+      <ul className="card-group-list">{children}</ul>
+    </div>
   );
 };

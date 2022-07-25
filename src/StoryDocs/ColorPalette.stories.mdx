@@ -1,0 +1,73 @@
+import {
+  Meta,
+  ColorPalette,
+  ColorItem,
+  Canvas,
+  Story,
+} from "@storybook/addon-docs";
+
+<Meta title="Color Palette" />
+
+<ColorPalette>
+  <ColorItem
+    title="theme.color.text"
+    subtitle="dark text"
+    colors={{
+      Dune: "hsl(0,0%,13%)", // #383533 primary (headline)
+      BlackCrow: "hsl(0,0%,29%)", // #737373 secondary (article date)
+      Boulder: "hsl(0,0%,45%)", // #4A4A4A ancillary (footer copyright)
+    }}
+  />
+  <ColorItem
+    title="theme.color.greyscale"
+    subtitle="Some of the greys"
+    colors={{ White: "#FFFFFF", Alabaster: "#F8F8F8", Concrete: "#F3F3F3" }}
+  />
+  <ColorItem
+    title="theme.color.primary"
+    subtitle="Coral"
+    colors={{ WildWatermelon: "#FF4785" }}
+  />
+  <ColorItem
+    title="theme.color.secondary"
+    subtitle="Ocean"
+    colors={{ DodgerBlue: "#1EA7FD" }}
+  />
+  <ColorItem
+    title="theme.color.positive"
+    subtitle="Green"
+    colors={{
+      Apple: "rgba(102,191,60,1)",
+      Apple80: "rgba(102,191,60,.8)",
+      Apple60: "rgba(102,191,60,.6)",
+      Apple30: "rgba(102,191,60,.3)",
+    }}
+  />
+</ColorPalette>
+
+# Color
+
+## Classifying Primary, Secondary, and Tertiary Actions
+
+- **Primary actions** should be obvious. Solid, high contrast background colors work great here.
+- **Secondary actions** should be clear but not prominent. Outline styles or lower contrast background colors are great options.
+- **Tertiary actions** should be discoverable but unobtrusive. Styling these actions like links is usually the best approach.
+
+**Web Content Accessibility Guidelines (W3C) [Use of Color](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html)**
+Color is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element. (Level A)
+[Understanding Success Criterion 1.4.1](https://www.w3.org/TR/2008/REC-WCAG20-20081211/#visual-audio-contrast-without-color)
+
+1. Use color and weight to create hierarchy instead of size
+2. Reduce contrast when working with colorful backgrounds by reducing the opacity of white text, or hand-picking a color based on the background color (choose a color that’s the same hue as the background, adjusting saturation and lightness) <br/>
+
+   - Reduce opacity: `color: hsl(0, 0%, 90%)` --> `color: hsl(0, 0%, 100%, 0.86)`<br />
+   - Choose a color that’s the same hue as the background and adjust the saturation
+     and lightness `color: hsl(176, 100%, 84%)` `background: hsl(176, 100%, 24%)`
+
+     >
+
+3. Add vertical offset to shadows instead of large blur and spread values. `box-shadow: 0 4 6px 0 hsla(0, 0%, 0%, 0.2)` `box-shadow: inset 0 2px 4px 0 hsla(0, 0%, 0%, 0.08)`
+
+4. Border alternatives: box-shadow, different background colors, extra spacing. `box-shadow: 0 2px 6px 0 hsla(0, 0%, 0%, 0.2)` / `margin-bottom: 48px`
+
+> credit: [refactoring-ui](https://medium.com/refactoring-ui/7-practical-tips-for-cheating-at-design-40c736799886)

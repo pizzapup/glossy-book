@@ -2,7 +2,7 @@ import React from "react";
 import { IconLink, Twitter } from "./IconLink";
 import "./IconLink.css";
 export default {
-  title: "Design System/Links/IconLink",
+  title: "Icon Link",
   id: "icon-link",
   component: IconLink,
   argTypes: {

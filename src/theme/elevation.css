@@ -10,17 +10,28 @@
 
 .outer {
   padding: 20px;
+  gap: 10px;
   align-items: center;
   display: flex;
   justify-content: center;
   color: rgba(255, 255, 255, 0.87);
+  list-style: none;
+  margin: 0;
 }
-.outer div {
-  margin: 1%;
-  height: 80px;
-  width: 70px;
+li {
+  aspect-ratio: 1/1;
+  height: 40px;
+  width: 40px;
   text-align: center;
   padding: 10px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.bright-theme {
+  background-color: white;
+  color: #666666;
 }
 
 .dp01 {
@@ -75,9 +86,4 @@
   background-color: rgba(255, 255, 255, 0.16);
   box-shadow: 0px 24px 38px 3px rgba(0, 0, 0, 0.14),
     0px 9px 46px 8px rgba(0, 0, 0, 0.12), 0px 11px 15px -7px rgba(0, 0, 0, 0.2);
-}
-
-.outer.bright-theme {
-  background-color: white;
-  color: #666666;
 }

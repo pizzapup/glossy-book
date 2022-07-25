@@ -1,0 +1,23 @@
+.list-wrapper {
+  color: pink;
+}
+.list {
+  list-style: none;
+}
+@supports (display: grid) {
+  /* simple one-column layout  */
+  .card-group-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    grid-column-gap: 1.5rem;
+    grid-row-gap: 1.5rem;
+  }
+  .list .list-item + .list .list-item {
+    margin-top: 0;
+  }
+  @media (max-width: 400px) {
+    .list-wrapper {
+      grid-gap: 4.5rem;
+    }
+  }
+}
