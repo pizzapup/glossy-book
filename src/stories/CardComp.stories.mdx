@@ -1,0 +1,97 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta title="CardInfo" />
+
+    A card is container for a few short, related pieces of information. There are no <card/> elements, ARIA design patterns, or corresponding accessibility standards for card components.
+
+**Do not wrap everything in the `<a href>` ! [adrian roselli](https://adrianroselli.com/2020/02/block-links-cards-clickable-regions-etc.html#Additional:~:text=way%20less%20awful.-,Links,-%23)**
+
+**Note on Headings!**
+
+- The Card component in this storybook is using an h2 heading. This is given the assumption that the card is the only component on the page following the title. Improper usage of a heading, or headings, not only results in WCAG failures, but can lead to confusion and poor user experience.
+- For easier management of headings I **strongly recommend** using ["react-accessible-headings"](https://www.npmjs.com/package/react-accessible-headings). It's very lightweight and especially helpful when composing clean, reusable, cohesive [SRP](https://en.wikipedia.org/wiki/Single-responsibility_principle), and accessible components.
+
+  - another solution to heading management, if for some reason the react-accessible-headings or similar packages are undesired, is to create a Heading component like this example by [Alexander Dubovoy](https://prismic.io/blog/accessible-components-in-a-cms#headings:~:text=Quotations-,Headings,-Headings%20provide%20some).
+
+- Alena Nik's article "[Inclusive components #2: the importance of headings" by Alena Nik"](https://dev.to/alenanik/inclusive-components-2-the-importance-of-headings-1h19) for information and resources on using headings in cards.
+
+- [Inclusive Components - Cards](https://inclusive-components.design/cards/) by Heydon Pickering
+- [Block Links, Cards, Clickable Regions, Rows, Etc.](https://adrianroselli.com/2020/02/block-links-cards-clickable-regions-etc.html#Additionals) by Adrian Roselli
+- [Accessible Cards](https://kittygiraudel.com/2022/04/02/accessible-cards/) by Kitty Giraudel
+- [Lightning Design System - Cards](https://www.lightningdesignsystem.com/components/cards/) from Salesforce
+- [A11Y Cards](https://a11y-style-guide.com/style-guide/section-cards.html#kssref-cards-basic) from A11Y
+- ["Cards: UI-Component Definition"](https://www.nngroup.com/articles/cards-component/) by Page Laubheimer
+
+## Content Design
+
+- Establish guidelines for recommended character/word counts for the different elements within cards, such as: headings, body text and calls-to-action [nomensa](https://www.nomensa.com/blog/how-build-accessible-cards-block-links#:~:text=few%20other%20pointers%3A-,Content%20design,-Establishing%20guidelines%20for)
+
+Recommended character/word counts:
+
+- headings
+- body text:
+- calls-to-action:
+
+Non-interactive cards ([styled sufficiently different](https://www.nomensa.com/blog/how-build-accessible-cards-block-links#:~:text=styled%20sufficiently%20different))
+
+## Basic Guidelines:
+
+- Optimize images ! Make use of lazy loading.
+- Contrast (minimum) - The visual presentation of text and images of text has a contrast ratio of at least **4.5:1** (some exceptions [WCAG](https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=131#contrast-minimum))
+- All elements that need to be highlighted have tabbing focus
+- Non-text Content - All non-text content that is presented to the user has a text alternative that serves the equivalent purpose If non-text content is pure decoration, is used only for visual formatting, or is not presented to users, then it does not need text alternatives, guidelines for [images of text](https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=131#images-of-text)
+- tip: You can add `class="visuallyhidden"` with descriptive text to give more context to a button or link's purpose.
+- instead of setting `outline:` to `none`, set it to `transparent` instead
+
+**Hover/Focus Styles**:
+`:focus` only applies to the link itself. Use `:focus-within` along with `:focus`
+
+          css:
+          .card a:focus {
+          /* basic focus styles */
+             text-decoration: underline;
+          }
+          .card:focus-within {
+          /* ignored if :focus-within is _not_ supported */
+              box-shadow: 000 0.25rem;
+              outline: 2px solid transparent;
+          }
+          .card:focus-within a:focus {
+          /* ignored if :focus-within is _not_ supported; removes unnecessary basic :focus style where  :focus-within is supported */
+             text-decoration: none;
+          }
+
+### Performance
+
+Images are one of the biggest culprits for web page size so it's important we optimise them. Tools like TinyJPG (& PNG) make this very easy. In addition to using optimisation tools to reduce file size we can also make use of the loading="lazy" attribute. Using this means we give browsers a nudge to delay the loading of images until they're needed
+
+### Why `<article></article>` ?
+
+The `<article>` HTML element represents a self-contained composition in a document, page, application, or site, which is intended to be independently distributable or reusable (e.g., in syndication). Examples include:
+
+<br />- forum post - magazine or newspaper article - blog entry - a product card
+- user-submitted comment - interactive widget or gadget - ... any other
+independent item of content
+
+PSEUDO CONTENT TRICK
+
+Click anywhere aka entire card is clickable. Can be helpful if the placement of a clickable element would not be obvious to users. (Without JavaScript)
+
+the pseudo-content method stretches the link's layout over the whole card, making the entire card clickable, without the need to alter established markup. The link acts as a mask over the top of the card.
+
+**pros**: doesn't rely on JavaScript, can be helpful if the placement of a clickable
+element would not be obvious to users, makes link easier to target by touch and mouse,
+link's context menu appears wherever the use right clicks on the card <br /> **cons**:
+difficult to select text ('raising' elements to fix this would cause a gap/hole in
+the clickable area), all card contents will form the label of the link (can become
+verbose. some screen readers only read out the first element of a 'block link', making
+it easy to miss the additional functionality) 1. give the card container element
+\`position: relative\` 2. give the link's \`::after\` pseudo-content \`position:
+absolute\` 3. give each of the link's \`::after\` pseudo-content \`left, top, right,
+\`and\` bottom\` properties a value of \`0\`
+
+[The Redundant Click Event](https://inclusive-components.design/cards/) - Heydon Pickering
+
+the "redundant-click-event" method places a JavaScript click handler on the card's container to trigger the click method on the link inside it. This approach prevents selecting the text.
+
+> "It's not highly probable the user would choose to select text from a card/teaser when they have access to the full content to which the card/teaser is pointing. But it may be disconcerting to them to find they cannot select the text" - Heydon Pickering

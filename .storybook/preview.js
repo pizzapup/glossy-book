@@ -1,6 +1,3 @@
-import "../src/theme/theme.css";
-import "@storybook/addon-console";
-
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
@@ -9,5 +6,4 @@ export const parameters = {
       date: /Date$/,
     },
   },
-  presets: ["@emotion/babel-preset-css-prop"],
-};
+}

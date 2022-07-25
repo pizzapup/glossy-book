@@ -1,40 +1,47 @@
 import "./Card.css";
-import Heading from "../Heading/Heading";
 
 export const Card = (props) => {
-  const { headingLevel = 2, ...rest } = props;
+  const Image = (data) => (
+    <img
+      src={data.src}
+      height={data.height}
+      width={data.width}
+      alt={data.alt}
+      className="card-image"
+    />
+  );
   return (
     <>
       <article className="card">
-        <div className="card-text">
-          <Heading level={headingLevel} className="card-heading">
-            <a
-              href="/card-design-woes"
-              className="card-link card-cta card-cta-primary"
-            >
-              A great product
+        {/** block, default , reorder extracta*/}
+        <div className="card-text-wrapper">
+          <h2 className="card-heading">
+            <a {...props.link} className="card-cta-primary">
+              {props.heading}
             </a>
-          </Heading>
-          <p className="card-text">Description of the great product</p>
-          <small className="card-small-text">By Great Products(TM)</small>
+          </h2>
+          <p className="card-text">{props.body}</p>
+          <small className="card-small">{props.smallText}</small>
         </div>
-        <div className="card-media">
-          <img {...rest.img} alt="" className="card-image" />
+        <div className="card-media-wrapper">
+          <Image {...props.media} />
         </div>
       </article>
     </>
   );
 };
-
-export const CardGroup = (props) => {
-  const list = ["a", "b", "c", "d"];
+export const CardGroup = ({ children }) => {
   return (
-    <ul className="card-group">
-      {list.map((card, index) => (
-        <li className="card-group-item">
-          <Card />
-        </li>
-      ))}
-    </ul>
+    <div className="card-group">
+      <ul className="card-group-list">{children}</ul>
+    </div>
+  );
+};
+
+export const CardGroupItem = (props) => {
+  return (
+    <li className="card-group-item">
+      <Card {...props} />
+    </li>
   );
 };

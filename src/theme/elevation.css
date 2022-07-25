@@ -1,0 +1,83 @@
+/* credits: https://codepen.io/nana8/pen/VoXPKQ?editors=1100 */
+
+.elevation-body {
+  background-color: #121212;
+  font-family: roboto;
+  font-size: 14px;
+  line-height: 30px;
+  margin: 0;
+}
+
+.outer {
+  padding: 20px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.87);
+}
+.outer div {
+  margin: 1%;
+  height: 80px;
+  width: 70px;
+  text-align: center;
+  padding: 10px;
+}
+
+.dp01 {
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+    0px 2px 1px -1px rgba(0, 0, 0, 0.12), 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dp02 {
+  background-color: rgba(255, 255, 255, 0.07);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+    0px 3px 1px -2px rgba(0, 0, 0, 0.12), 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dp03 {
+  background-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.14),
+    0px 3px 3px -2px rgba(0, 0, 0, 0.12), 0px 1px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dp04 {
+  background-color: rgba(255, 255, 255, 0.09);
+  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 10px 0px rgba(0, 0, 0, 0.12), 0px 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+.dp06 {
+  background-color: rgba(255, 255, 255, 0.11);
+  box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 18px 0px rgba(0, 0, 0, 0.12), 0px 3px 5px -1px rgba(0, 0, 0, 0.2);
+}
+
+.dp08 {
+  background-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0px 8px 10px 1px rgba(0, 0, 0, 0.14),
+    0px 3px 14px 2px rgba(0, 0, 0, 0.12), 0px 5px 5px -3px rgba(0, 0, 0, 0.2);
+}
+
+.dp12 {
+  background-color: rgba(255, 255, 255, 0.14);
+  box-shadow: 0px 12px 17px 2px rgba(0, 0, 0, 0.14),
+    0px 5px 22px 4px rgba(0, 0, 0, 0.12), 0px 7px 8px -4px rgba(0, 0, 0, 0.2);
+}
+
+.dp16 {
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0px 16px 24px 2px rgba(0, 0, 0, 0.14),
+    0px 6px 30px 5px rgba(0, 0, 0, 0.12), 0px 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.dp24 {
+  background-color: rgba(255, 255, 255, 0.16);
+  box-shadow: 0px 24px 38px 3px rgba(0, 0, 0, 0.14),
+    0px 9px 46px 8px rgba(0, 0, 0, 0.12), 0px 11px 15px -7px rgba(0, 0, 0, 0.2);
+}
+
+.outer.bright-theme {
+  background-color: white;
+  color: #666666;
+}
